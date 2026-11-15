@@ -1,0 +1,6 @@
+{
+  "name": "Gemini Arduino AI Studio",
+  "description": "AI-powered Arduino and embedded systems engineering workstation integrating Google Gemini, Monaco IDE, visual & 3D circuit design, electronics calculators, and hardware serial control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

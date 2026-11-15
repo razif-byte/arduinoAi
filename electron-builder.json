@@ -1,0 +1,61 @@
+{
+  "appId": "com.gemini.arduino.aistudio",
+  "productName": "Gemini Arduino AI Studio",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "server.ts",
+    "server/**/*",
+    "src/logic/**/*",
+    "src/data/**/*",
+    "src/types/**/*",
+    "electron/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "artifactName": "${productName}-${version}-win-x64.${ext}"
+  },
+  "linux": {
+    "target": [
+      {
+        "target": "AppImage",
+        "arch": ["x64"]
+      },
+      {
+        "target": "deb",
+        "arch": ["x64"]
+      },
+      {
+        "target": "tar.gz",
+        "arch": ["x64"]
+      }
+    ],
+    "category": "Development;Electronics;Engineering;",
+    "maintainer": "Gemini Arduino AI Studio",
+    "synopsis": "AI-Powered Arduino, PlatformIO & C51 Embedded Systems Studio",
+    "description": "Cross-platform Arduino CLI, PlatformIO, and STC8 C51 embedded development workstation for Windows 11 and Ubuntu Studio.",
+    "artifactName": "${productName}-${version}-linux-x64.${ext}"
+  },
+  "deb": {
+    "depends": ["libgtk-3-0", "libnotify4", "libnss3", "libxtst6", "xdg-utils"],
+    "priority": "optional"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  }
+}
